@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Order Details</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <h3>Order page</h3>
+        
+        <form action="/shop" method="post">
+        {% csrf_token %}
+            <label for="">Name</label>
+            <input type="text" id="Name1" name="Name1" placeholder = "Enter your name" Required>
+            <br>
+            <label for="">DOB</label>
+            <input type="date" id="DOB" name="DOB" placeholder = "Enter date of Birth" Required>
+            <br>
+            <label for="">Age</label>
+            <input type="text" id="Age" name="Age" placeholder = "Enter age" Required>
+            <br>
+            <label for="">Gender</label>
+            <input type="text" id="Gender" name="Gender" placeholder = "Enter Gender" Required>
+            <br>
+            <label for="">PhoneNumber</label>
+            <input type="text" id="PhoneNumber" name="PhoneNumber" placeholder = "Enter Phone NUmber" Required>
+            <br>
+            <label for="">Email</label>
+            <input type="email" id="Email" name="Email" placeholder = "Enter your Email Address" Required>
+            <br>
+            <label for="">Address</label>
+            <input type="text" id="Address" name="Address" placeholder = "Enter Address" Required>
+            <br>
+            <label for="">Department:</label>
+            <select id="Department" name="Department">
+            <option value="CS">Computer Science</option>
+            <option value="CO">Commerce</option>
+            <option value="CL">Civil</option>
+            <option value="EE">Electrical</option>
+            <option value="AE">AeroSpace</option>
+            </select>
+            <br>
+            <label for="">Courses:</label>
+            <select id="Courses" name="Courses">
+            <option value="CSb">Btech cs</option>
+            <option value="CObb">Bcom</option>
+            <option value="CLb">Btech Civil</option>
+            <option value="EEb">Btech Electrical</option>
+            <option value="AEb">Btech AeroSpace</option>
+            </select>
+            <br>
+            <label for="">ItemsBought</label>
+            <textarea name="ItemsBought" rows="10" cols="30" placeholder = "Elist items bought" Required></textarea>
+            {% comment %} <input type="text" id="ItemsBought" name="ItemsBought" placeholder = "Elist items bought" Required> {% endcomment %}
+            <br>
+            <button type="submit"><a href="/confirm">Confirm</button>
+            <button type="submit"><a href="/signout">SignOut</button>
+        </form>
+
+        <script src="" async defer></script>
+    </body>
+</html>
